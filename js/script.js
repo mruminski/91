@@ -32,3 +32,17 @@ var data = [
 		categories: []
 	},
 ];
+
+
+
+var boxArr = document.querySelectorAll('.container__box');
+
+for (var i = 0; i < boxArr.length; i++) {
+  var header = boxArr[i].querySelector('.container__header');
+  var content = boxArr[i].querySelector('p');
+
+  header.innerHTML = data[i].title;
+  content.innerHTML = data[i].content;
+
+}
+
