@@ -38,6 +38,7 @@ var headerArr = document.querySelectorAll('.container__header');
 var contentArr = document.querySelectorAll('p');
 
 for (var i = 0; i < boxArr.length; i++) {
+	boxArr[i].setAttribute('id',data[i].id);
   headerArr[i].innerHTML = data[i].title;
   contentArr[i].innerHTML = data[i].content;
 	
