@@ -33,16 +33,24 @@ var data = [
 	},
 ];
 
-
-
 var boxArr = document.querySelectorAll('.container__box');
+var headerArr = document.querySelectorAll('.container__header');
+var contentArr = document.querySelectorAll('p');
 
 for (var i = 0; i < boxArr.length; i++) {
-  var header = boxArr[i].querySelector('.container__header');
-  var content = boxArr[i].querySelector('p');
+  headerArr[i].innerHTML = data[i].title;
+  contentArr[i].innerHTML = data[i].content;
+	
+	(function() {
+		var categoryArr = data[i].categories;
+		for (var j = 0; j < categoryArr.length; j++) {
+			if (categoryArr[j].length > 0 && categoryArr[j] != 'special-header') {
+				boxArr[i].classList.add(categoryArr[j]);
+			} else if (categoryArr[j] == 'special-header') {
+				headerArr[i].classList.add(categoryArr[j]);
+			}
+		};
+	})();
+};
 
-  header.innerHTML = data[i].title;
-  content.innerHTML = data[i].content;
-
-}
 
