@@ -1,0 +1,37 @@
+:root {font-size: 16px; }
+
+body {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container {
+  &__box {
+    width: 180px;
+    min-height: 80px;
+    margin: 10px;
+    border: 1px solid grey;
+    display: inline-block;
+    opacity: 0.7;
+  }
+  &__header {
+    display: block;
+    border: 1px solid black;
+  }
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+.special-header {
+  background-color: yellowgreen;
+}
+
+.important {
+  opacity: 1;
+}
+
+.footer__content {
+  font-size: 1.4rem;
+}
